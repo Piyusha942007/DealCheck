@@ -15,3 +15,7 @@ def search():
     return jsonify(data)
 
 app.run(debug=True)
+
+@app.route("/")
+def home():
+    return {"message": "DealCheck API is running!"}
