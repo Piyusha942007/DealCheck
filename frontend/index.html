@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DealCheck</title>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="falling-boxes-container"></div>
+    <main>
+        <div class="pill-nav-container" id="pill-nav-container">
+            <nav class="pill-nav" id="pill-nav-bar">
+
+                <div class="site-name">DEALCHECK</div>
+
+                <div class="pill-nav-items desktop-only" id="desktop-nav-items">
+                    <ul class="pill-list">
+                        <li>
+                            <a href="#home" class="pill" data-index="0">
+                                <span class="hover-circle" aria-hidden="true"></span>
+                                <span class="label-stack">
+                                    <span class="pill-label">Home</span>
+                                    <span class="pill-label-hover" aria-hidden="true">Home</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="pill" data-index="1">
+                                <span class="hover-circle" aria-hidden="true"></span>
+                                <span class="label-stack">
+                                    <span class="pill-label">About</span>
+                                    <span class="pill-label-hover" aria-hidden="true">About</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#whyus" class="pill" data-index="2">
+                                <span class="hover-circle" aria-hidden="true"></span>
+                                <span class="label-stack">
+                                    <span class="pill-label">Why Us</span>
+                                    <span class="pill-label-hover" aria-hidden="true">Why Us</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="mobile-menu-button mobile-only" id="mobileMenuButton" aria-expanded="false"
+                    aria-controls="mobileMenuPopover" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+            </nav>
+
+            <div class="mobile-menu-popover mobile-only" id="mobileMenuPopover" aria-hidden="true">
+                <ul class="mobile-menu-list">
+                    <li><a href="#home" class="mobile-menu-link">Home</a></li>
+                    <li><a href="#about" class="mobile-menu-link">About</a></li>
+                    <li><a href="#whyus" class="mobile-menu-link">Why Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <h1>Find Best Prices Instantly</h1>
+                <p>Compare prices from top online stores in one click.</p>
+               <a class="get-started-btn" href="getstarted.html">Get Started</a>
+
+            </div>
+
+            <div class="hero-img-video">
+                <model-viewer id="cart-model" src="public/5_shopping_cart.glb" alt="3D Shopping Cart Model"
+                    shadow-intensity="1" camera-controls auto-rotate disable-zoom exposure="1.5"
+                    environment-image="neutral"></model-viewer>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content">
+
+                <div class="about-content-video">
+                    <video autoplay muted loop playsinline disablepictureinpicture
+                        controlslist="nodownload noplaybackrate">
+                        <source src="public/abtus.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="about-content-text">
+                    <h2>About Us</h2>
+                    <p>
+                        DealCheck helps you compare prices across top e‑commerce platforms instantly.
+                        Our mission is to save your time and money by bringing the best deals to one place.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="whyus" class="whyus-section">
+            <h2>Why Us</h2>
+
+            <div class="whyus-cards" id="whyus-cards-container">
+                <div class="why-card">
+                    <h3>🔍 Accurate Price Comparison</h3>
+                    <p>We analyze prices from top platforms instantly so you always get the best deal.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>⚡ Lightning Fast</h3>
+                    <p>Our engine fetches data in real‑time with zero delays.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>📦 Trusted Stores Only</h3>
+                    <p>We compare prices only from verified and reliable sellers.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>🎯 Smart Recommendations</h3>
+                    <p>AI helps you choose the best option based on value, reviews, and trends.</p>
+                </div>
+            </div>
+        </section>
+        
+       
+        
+    </main>
+
+   
+
+    <script src="script.js"></script>
+</body>
+
+</html>

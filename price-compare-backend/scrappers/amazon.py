@@ -2,26 +2,45 @@ import requests
 from bs4 import BeautifulSoup
 
 def scrape_amazon(product):
-    query = product.replace(" ", "+")
-    url = f"https://www.amazon.in/s?k={query}"
+    try:
+        query = product.replace(" ", "+")
+        url = f"https://www.amazon.in/s?k={query}"
 
-    headers = {
-        "User-Agent": "Mozilla/5.0"
-    }
+        headers = {
+            "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                           "AppleWebKit/537.36 (KHTML, like Gecko) "
+                           "Chrome/118.0.0.0 Safari/537.36"),
+            "Accept-Language": "en-US,en;q=0.9",
+        }
 
-    page = requests.get(url, headers=headers)
-    soup = BeautifulSoup(page.text, "html.parser")
+        response = requests.get(url, headers=headers, timeout=10)
 
-    title = soup.select_one(".a-size-medium.a-color-base.a-text-normal")
-    price = soup.select_one(".a-price-whole")
-    link = soup.select_one(".a-link-normal.s-no-outline")
+        if response.status_code != 200:
+            print("Amazon blocked request:", response.status_code)
+            return None
 
-    if not title or not price or not link:
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        product_box = soup.select_one("div[data-component-type='s-search-result']")
+        if not product_box:
+            print("Amazon: No result-container found")
+            return None
+
+        title = product_box.select_one("h2 a span")
+        price = product_box.select_one(".a-price-whole")
+        link = product_box.select_one("h2 a")
+
+        if not (title and price and link):
+            print("Amazon: Missing title/price/link")
+            return None
+
+        return {
+            "website": "Amazon",
+            "title": title.get_text(strip=True),
+            "price": price.get_text(strip=True),
+            "url": "https://www.amazon.in" + link.get("href")
+        }
+
+    except Exception as e:
+        print("Amazon scraper error:", e)
         return None
-
-    return {
-        "website": "Amazon",
-        "title": title.text.strip(),
-        "price": price.text.strip(),
-        "url": "https://www.amazon.in" + link["href"]
-    }
