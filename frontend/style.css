@@ -388,6 +388,49 @@ main {
     justify-content: center;
     min-height: 400px;
 }
+/* Get Started Button */
+.ctn-btn {
+    background: #4c6ef5;          /* Blue gradient-like solid */
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(76, 110, 245, 0.3);
+}
+
+.ctn-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(76, 110, 245, 0.45);
+    background: #3b5bdb;
+}
+
+.ctn-btn:active {
+    transform: scale(0.97);
+}
+.get-started-btn {
+    display: inline-block;
+    font-size: 2rem;
+    color: #7a1fde;          /* Purple color */
+    text-decoration: none;    /* remove default underline */
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+     /* spacing like your screenshot */
+    color: #4c6ef5;              /* lighter purple on hover */
+}
+
+
 
 model-viewer {
     width: 100%;
@@ -641,3 +684,67 @@ model-viewer {
     }
 }
 
+.banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 3000px; /* increase perspective */
+  overflow: visible;   /* allow cards to show outside banner */
+}
+
+.slider {
+  --cards: 10;            /* total cards */
+  --card-width: 18vw;    /* smaller cards */
+  --card-height: calc(var(--card-width) * 1.35);
+  --radius: 30vw;        /* smaller radius to fit viewport */
+
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 18s linear infinite;
+  transform: rotateX(-10deg); /* slight tilt */
+}
+
+@keyframes rotate {
+  from { transform: rotateX(-10deg) rotateY(0deg); }
+  to { transform: rotateX(-10deg) rotateY(360deg); }
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--card-width);
+  height: var(--card-height);
+  transform: rotateY(calc((var(--position) - 1) * (360deg / var(--cards))))
+             translateZ(var(--radius));
+  transition: transform 0.5s;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider {
+    --card-width: 35vw;
+    --card-height: calc(var(--card-width) * 1.35);
+    --radius: 40vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    --card-width: 50vw;
+    --card-height: calc(var(--card-width) * 1.35);
+    --radius: 60vw;
+  }
+}
