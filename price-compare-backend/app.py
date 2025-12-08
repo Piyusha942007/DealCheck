@@ -1,3 +1,7 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
 @app.route("/search")
 def search():
     product = request.args.get("q")

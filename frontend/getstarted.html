@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,34 +20,194 @@
 
         <!-- Search Box -->
         <div class="search-box">
-            <input 
-                id="productInput" 
-                type="text" 
-                placeholder="Search for a product..."
-                autocomplete="off"
-            >
+            <input id="productInput" type="text" placeholder="Search for a product..." autocomplete="off">
             <button id="searchButton" class="cta-btn">Search</button>
         </div>
 
         <!-- Results -->
         <div id="resultsDisplay" class="results-display"></div>
-         <div class="banner">
-        <div class="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"><img src="images/fashion.png" alt=""></div>
-            <div class="item" style="--position: 2"><img src="images/bags.png" alt=""></div>
-            <div class="item" style="--position: 3"><img src="images/beauty.png" alt=""></div>
-            <div class="item" style="--position: 4"><img src="images/footwear.png" alt=""></div>
-            <div class="item" style="--position: 5"><img src="images/watches.png" alt=""></div>
-            <div class="item" style="--position: 6"><img src="images/menwear.png" alt=""></div>
-            <div class="item" style="--position: 7"><img src="images/jewelery.png" alt=""></div>
-            <div class="item" style="--position: 8"><img src="images/home decor.png" alt=""></div>
-            <div class="item" style="--position: 9"><img src="images/mobile.png" alt=""></div>
-            <div class="item" style="--position: 10"><img src="images/handbags.png" alt=""></div>
+        <div class="banner">
+            <div class="slider" style="--quantity: 10">
+                <div class="item" style="--position: 1">
+                    <div class="card">
+                        <img src="images/fashion.png" alt="Fashion">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/b?node=1968024031" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.myntra.com/shop/men" target="_blank" class="platform myntra">Myntra</a>
+                            <a href="https://www.nykaafashion.com/" target="_blank" class="platform meesho">Nykaa</a>
+                            <a href="https://www.flipkart.com/clothing-and-accessories/winter-wear/pr?sid=clo,qvw&p[]=facets.ideal_for%255B%255D%3DWomen&otracker=categorytree"
+                                target="_blank" class="platform flipkart">Flipkart</a>
+                            <a href="https://www.meesho.com/clothing-men/pl/3f" target="_blank"
+                                class="platform meesho">Meesho</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="--position: 2">
+                    <div class="card">
+                        <img src="images/bags.png" alt="Bags">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/bags/s?k=bags" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.flipkart.com/bags-wallets-belts/pr?sid=reh&q=bags&otracker=categorytree"
+                                target="_blank" class="platform flipkart">Flipkart</a>
+                            <a href="https://www.myntra.com/bags" target="_blank" class="platform myntra">Myntra</a>
+                            <a href="https://www.meesho.com/search?q=bags&searchType=manual&searchIdentifier=text_search"
+                                target="_blank" class="platform meesho">Meesho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="--position: 3">
+                    <div class="card">
+                        <img src="images/beauty.png" alt="Skincare & Makeup">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/s?k=makeup&crid=3DGWCTD8IX12C&sprefix=makeu%2Caps%2C264&ref=nb_sb_noss_2"
+                                target="_blank" class="platform amazon">Amazon</a>
+                            <a href="https://www.myntra.com/beauty" target="_blank" class="platform myntra">Myntra</a>
+                            <a href="https://www.nykaa.com/makeup/c/12?search_redirection=True" target="_blank"
+                                class="platform nykaa">Nykaa</a>
+                            <a href="https://www.flipkart.com/search?q=makeup&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"
+                                target="_blank" class="platform flipkart">Flipkart</a>
+                            <a href="https://www.meesho.com/search?q=makeup&searchType=manual&searchIdentifier=text_search"
+                                target="_blank" class="platform meesho">Meesho</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" style="--position: 4">
+                    <div class="card">
+                        <img src="images/footwear.png" alt="Footwear">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/s?k=footwear" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.myntra.com/footwear" target="_blank" class="platform myntra">Myntra</a>
+                            <a href="https://www.meesho.com/search?q=footwear" target="_blank"
+                                class="platform meesho">Meesho</a>
+                            <a href="https://www.flipkart.com/search?q=footwear" target="_blank"
+                                class="platform flipkart">Flipkart</a>
+                            <a href="https://www.nykaa.com/search/result/?q=footwear&root=search&searchType=Manual&sourcepage=Category+Page"
+                                target="_blank" class="platform nykaa">Nykaa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="--position: 5">
+                    <div class="card">
+                        <img src="images/watches.png" alt="Watches">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/s?k=watches" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.myntra.com/watches" target="_blank" class="platform myntra">Myntra</a>
+                            <a href="https://www.meesho.com/search?q=watches" target="_blank"
+                                class="platform meesho">Meesho</a>
+                            <a href="https://www.croma.com/searchB?q=watches%3Arelevance&text=watches" target="_blank"
+                                class="platform croma">Croma</a>
+                            <a href="https://www.nykaa.com/search/result/?q=watches&root=search&searchType=Manual&sourcepage=Category+Page"
+                                target="_blank" class="platform nykaa">Nykaa</a>
+                            <a href="https://www.flipkart.com/search?q=watches" target="_blank"
+                                class="platform flipkart">Flipkart</a>
+                            <a href="https://www.reliancedigital.in/products?q=watches&page_no=1&page_size=12&page_type=number"
+                                target="_blank" class="platform reliance">Reliance</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" style="--position: 6">
+                    <div class="card">
+                        <img src="images/menwear.png" alt="Men's Fashion">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/s?k=men+clothing" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.myntra.com/men-wear?rawQuery=men%20wear" target="_blank"
+                                class="platform myntra">Myntra</a>
+                            <a href="https://www.meesho.com/search?q=men+clothing" target="_blank"
+                                class="platform meesho">Meesho</a>
+                            <a href="https://www.flipkart.com/search?q=men+clothing" target="_blank"
+                                class="platform flipkart">Flipkart</a>
+                            <a href="https://www.nykaafashion.com/catalogsearch/result/?q=men%20wear&searchType=ManualSearch&internalSearchTerm=men+wear&typedSearchTerm=men+wear"
+                                target="_blank" class="platform nykaa">Nykaa</a>s
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="--position: 7">
+                    <div class="card">
+                        <img src="images/jewelery.png" alt="Jewellery">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/s?k=jewellery" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.myntra.com/jewellery" target="_blank"
+                                class="platform myntra">Myntra</a>
+                            <a href="https://www.meesho.com/search?q=jewellery" target="_blank"
+                                class="platform meesho">Meesho</a>
+                            <a href="https://www.flipkart.com/search?q=jewellery" target="_blank"
+                                class="platform flipkart">Flipkart</a>
+                            <a href="https://www.nykaa.com/jewellery-accessories/jewellery-collection/c/11517?redirectpath=slug&search_redirection=True"
+                                target="_blank" class="platform nykaa">Nykaa</a>s
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="--position: 8">
+                    <div class="card">
+                        <img src="images/home decor.png" alt="Home Decor">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/s?k=home+decor" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.myntra.com/home-decor" target="_blank"
+                                class="platform myntra">Myntra</a>
+                            <a href="https://www.meesho.com/search?q=home+decor" target="_blank"
+                                class="platform meesho">Meesho</a>
+                            <a href="https://www.flipkart.com/search?q=home+decor" target="_blank"
+                                class="platform flipkart">Flipkart</a>
+                            <a href="https://www.nykaa.com/search/result/?q=home%20decor&root=search&searchType=Manual&sourcepage=Category+Page"
+                                target="_blank" class="platform nykaa">Nykaa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="--position: 9">
+                    <div class="card">
+                        <img src="images/mobile.png" alt="Mobiles & Accessories">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/s?k=mobiles+and+accessories" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.flipkart.com/search?q=mobiles+and+accessories" target="_blank"
+                                class="platform flipkart">Flipkart</a>
+                            <a href="https://www.myntra.com/mobile-accessories" target="_blank"
+                                class="platform myntra">Myntra</a>
+                            <a href="https://www.croma.com/searchB?q=mobile%3Arelevance&text=mobile" target="_blank"
+                                class="platform croma">Croma</a>
+                            <a href="https://www.meesho.com/search?q=mobile+accessories" target="_blank"
+                                class="platform meesho">Meesho</a>
+                            <a href="https://www.reliancedigital.in/sections/mobiles" target="_blank"
+                                class="platform reliance">Reliance</a>
+                            <a href="https://www.nykaafashion.com/catalogsearch/result/?q=mobile&searchType=ManualSearch&internalSearchTerm=mobile&typedSearchTerm=mobile"
+                                target="_blank" class="platform nykaa">Nykaa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" style="--position: 10">
+                    <div class="card">
+                        <img src="images/handbags.png" alt="Handbags">
+                        <div class="overlay">
+                            <a href="https://www.amazon.in/s?k=handbags" target="_blank"
+                                class="platform amazon">Amazon</a>
+                            <a href="https://www.myntra.com/handbags" target="_blank" class="platform myntra">Myntra</a>
+                            <a href="https://www.meesho.com/search?q=handbags" target="_blank"
+                                class="platform meesho">Meesho</a>
+                            <a href="https://www.flipkart.com/search?q=handbags" target="_blank"
+                                class="platform flipkart">Flipkart</a>
+                            <a href="https://www.nykaa.com/search/result/?q=Handbags&root=search&searchType=Misc&suggestionType=category&ssp=2&tst=handb&searchItem=Handbags&sourcepage=Category%20Page&" target="_blank"
+                                class="platform nykaa">Nykaa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
 
         </div>
 
-    </div>
-        
 
     </main>
 
@@ -55,4 +216,5 @@
 
 
 </body>
+
 </html>
